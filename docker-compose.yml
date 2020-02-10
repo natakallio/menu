@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+
+    ports:
+      - 3036:3000
+    # environment:
+    #   - NODE_ENV=development
+
+  tests:
+    container_name: tests
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    command: ["yarn", "test"]
