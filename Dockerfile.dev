@@ -4,7 +4,7 @@ FROM node:12
 # set working directory
 WORKDIR /app
 
-RUN npm install react-scripts -g
+# RUN npm install react-scripts -g
 
 # install and cache app dependencies
 COPY package.json .

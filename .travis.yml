@@ -9,4 +9,4 @@ before_install:
     - docker build -t websample -f Dockerfile.dev .
 
 scripts:
-    - docker run websample yarn tesst -- --coverage
+    - docker run websample yarn test -- --coverage
