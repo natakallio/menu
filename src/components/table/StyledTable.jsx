@@ -65,6 +65,7 @@ class StyledTable extends Component {
     render() {
         console.log("this.state.leftPositions", this.state.leftPositions)
         const { tableData } = this.props;
+        console.log("tableData", tableData)
 
         const rowCount = 20;
         const columnCount = tableData[0].length;

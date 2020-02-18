@@ -24,6 +24,7 @@ function App() {
     <div className="App">
       {/* <Navbar router={router} />
       <NavbarWithBrand router={router} /> */}
+
       {/* <GridContentWrapper /> */}
       {/* <GridTest /> */}
       {/* <TableComponent /> */}
@@ -33,7 +34,7 @@ function App() {
       {/* <Table data={[makeGridHeader(salaryTipes).map(x => x.cellText)]} /> */}
 
       <StyledTable tableData={[makeGridHeader(salaryTipes).map(x => x.cellText)]} fixColumnCount={2} />
-      <WithTableData render={
+      <WithTableData doRender={
         (tableData, fixColumnCount) => (
           <StyledTable tableData={tableData} fixColumnCount={fixColumnCount} />
         )
