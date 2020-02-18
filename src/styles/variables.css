@@ -25,6 +25,8 @@
   --color-background-table-header-notfixed: rgb(192, 252, 115);
   --color-table-header-fixed: rgba(0, 0, 0);
   --color-background-table-header-fixed: rgb(250, 241, 120);
+  --color-table-row-hover: rgb(202, 202, 248);
+
   --color-secondary: rgba(0, 255, 0, 0.3);
   --color-navbar-background: rgb(51, 152, 219);
   --color-navbar-icon-background: rgb(41, 128, 185);

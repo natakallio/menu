@@ -31,16 +31,20 @@ const Td = styled.td.attrs(props => (
         position: sticky;
         left: ${leftPosition +"px"};
         z-index: 1;
-        background-color: aquamarine;
     `}
+    background-color: ${({ isHover, fixedToLeft }) => isHover ? "var(--color-table-row-hover)" : fixedToLeft? "yellow" : "inherit"};
 `;
 
 const StyledCell = props => {
 
-    const { cellType, children } = props;
+    const { cellType, isHover, children } = props;
+    if(props.rowNum === 1 && props.colNum === 4) {
+        console.log("!!!!!!! props", props)
+    }
+
 
     if (cellType === "td") {
-        return <Td {...props}>{children}</Td>;
+        return <Td {...props} isHover={isHover}>{children}</Td>;
     }
 
     return (

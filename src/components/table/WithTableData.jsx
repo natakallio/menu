@@ -46,7 +46,7 @@ export default class WithTableData extends Component {
             rows.push(columns);
         }
         const tableData = [...tableDataWithHeader, ...rows];
-        console.log("XXXtableData", tableData)
+
         return tableData;
     }
 

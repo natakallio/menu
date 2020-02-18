@@ -1,12 +1,10 @@
 import React, { Component }  from 'react';
 import PropTypes from 'prop-types';
 import StyledTableHeader from './StyledTableHeader';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import StyledTableBodyRow from './StyledTableBodyRow';
-// import './table4.css';
 import styled from 'styled-components';
 import StyledCell from './StyledCell';
+import './table5.css';
 
 const TableContainer = styled.div.attrs({
     className: "TableContainer"
@@ -27,12 +25,6 @@ const Table = styled.table.attrs({
     width: 100%;
 `;
 
-const Icon = styled.span.attrs({
-    className: "Icon"
-})`
-    cursor: pointer;
-`;
-
 class StyledTable extends Component {
 
     constructor(props) {
@@ -48,7 +40,7 @@ class StyledTable extends Component {
         let nullPosition = 0;
         for (let columnNum = 0; columnNum <= (this.props.fixColumnCount || 0); columnNum++) {
             const columnElement = document.getElementsByClassName("col_" + columnNum)[0];
-            console.log("columnElement", columnElement);
+
             if (columnNum === 0) {
                 nullPosition = columnElement.getBoundingClientRect().x;
             }
@@ -63,12 +55,9 @@ class StyledTable extends Component {
     }
 
     render() {
-        console.log("this.state.leftPositions", this.state.leftPositions)
         const { tableData } = this.props;
-        console.log("tableData", tableData)
 
         const rowCount = tableData.length;
-        console.log("rowCount", rowCount)
         const columnCount = tableData[0].length;
 
 
