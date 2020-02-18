@@ -67,22 +67,19 @@ class StyledTable extends Component {
         const { tableData } = this.props;
         console.log("tableData", tableData)
 
-        const rowCount = 20;
+        const rowCount = tableData.length;
+        console.log("rowCount", rowCount)
         const columnCount = tableData[0].length;
-        const icon = (
-            <Icon className="icon">
-                <FontAwesomeIcon icon={faPencilAlt} fixedWidth />
-            </Icon>
-        );
+
 
         let rows = [];
-        for (let x = 0; x < rowCount; x++) {
+        for (let x = 1; x < rowCount; x++) {
             const columns = [];
             for (let y = 0; y < columnCount; y++) {
                 columns.push(
                 <StyledCell key={`${x}${y}`} cellType="td" rowNum={x} colNum={y}
                     fixedToLeft={y<=this.props.fixColumnCount} leftPosition={this.state.leftPositions[y]}>
-                    {y === 0 ? icon : x + " " + y}
+                    {tableData[x][y]}
                 </StyledCell>);
             }
             rows.push(<StyledTableBodyRow key={`row${x}`} rowNum={x}>{columns}</StyledTableBodyRow>)

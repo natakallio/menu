@@ -1,6 +1,15 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import makeGridHeader from "../../generalFunctions/makeGridHeader";
 import { salaryTipes } from "../../data/salaryTypes";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
+import styled from 'styled-components';
+
+const Icon = styled.span.attrs({
+    className: "Icon"
+})`
+    cursor: pointer;
+`;
 
 export default class WithTableData extends Component {
 
@@ -22,12 +31,17 @@ export default class WithTableData extends Component {
     doTable() {
         const tableDataWithHeader = [makeGridHeader(salaryTipes).map(x => x.cellText)];
         const columnCount = tableDataWithHeader[0].length;
+        const icon = (
+            <Icon className="icon">
+                <FontAwesomeIcon icon={faPencilAlt} fixedWidth />
+            </Icon>
+        );
 
         let rows = [];
-        for (let x = 0; x < this.rowCount; x++) {
+        for (let x = 1; x <= this.rowCount; x++) {
             const columns = [];
             for (let y = 0; y < columnCount; y++) {
-                columns.push(y === 0 ? "icon" : x + " " + y);
+                columns.push(y === 0 ? icon : x + " " + y);
             }
             rows.push(columns);
         }
@@ -39,6 +53,6 @@ export default class WithTableData extends Component {
 
 
     render() {
-        return this.props.doRender(this.state.tableData, this.state.fixColumnCount);
+        return this.props.render(this.state.tableData, this.state.fixColumnCount);
     }
 }

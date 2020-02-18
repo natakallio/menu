@@ -33,8 +33,9 @@ function App() {
       {/* <GridFlex /> */}
       {/* <Table data={[makeGridHeader(salaryTipes).map(x => x.cellText)]} /> */}
 
-      <StyledTable tableData={[makeGridHeader(salaryTipes).map(x => x.cellText)]} fixColumnCount={2} />
-      <WithTableData doRender={
+      {/* <StyledTable tableData={[makeGridHeader(salaryTipes).map(x => x.cellText)]} fixColumnCount={2} /> */}
+
+      <WithTableData render={
         (tableData, fixColumnCount) => (
           <StyledTable tableData={tableData} fixColumnCount={fixColumnCount} />
         )

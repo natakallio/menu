@@ -17,7 +17,7 @@ const Th = styled.th.attrs(props => (
     ${({fixedToLeft, leftPosition}) => fixedToLeft && `
         color: var(--color-table-header-fixed);
         background-color: var(--color-background-table-header-fixed);
-        left: ${leftPosition +"px"};
+        left: ${leftPosition === 0 ? "0" : leftPosition +"px"};
         z-index: 3;
     `}
 `;
