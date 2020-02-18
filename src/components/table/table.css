@@ -1,0 +1,94 @@
+.subreddit-table-wrapper {
+  overflow: auto;
+  height: 300px;
+  width: 600px;
+}
+
+/* Use position: sticky to have it stick to the edge
+ * and top, right, or left to choose which edge to stick to: */
+ .subreddit-table-wrapper thead th {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+}
+
+.subreddit-table-wrapper tbody th {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  left: 0;
+}
+
+/* To have the header in the first column stick to the left: */
+.subreddit-table-wrapper thead th:first-child {
+  left: 0;
+  z-index: 1;
+}
+
+/* Just to display it nicely: */
+.subreddit-table-wrapper thead th {
+  background: #000;
+  color: #FFF;
+}
+
+.subreddit-table-wrapper tbody th {
+  background: #FFF;
+  border-right: 1px solid #CCC;
+}
+
+.subreddit-table-wrapper table {
+  border-collapse: collapse;
+}
+
+.subreddit-table-wrapper td,
+.subreddit-table-wrapper th {
+  padding: 0.5em;
+}
+
+
+
+/* ----------------------------------------------------------------------------*/
+.grid-container {
+  display: grid;
+  /* This is a (hacky) way to make the .grid element size to fit its content */
+  overflow: auto;
+  height: 300px;
+  width: 600px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.grid-col {
+  width: 150px;
+  min-width: 150px;
+}
+
+.grid-item--header {
+  height: 100px;
+  min-height: 100px;
+  position: sticky;
+  position: -webkit-sticky;
+  background: white;
+  top: 0;
+}
+
+.grid-col--fixed-left {
+  position: sticky;
+  left: 0;
+  z-index: 9998;
+  background: white;
+}
+
+.grid-col--fixed-right {
+  position: sticky;
+  right: 0;
+  z-index: 9998;
+  background: white;
+}
+
+.grid-item {
+  height: 50px;
+  border: 1px solid gray;
+}

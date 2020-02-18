@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/pureFunction.css';
+import '../../styles/pureFunction.css';
 
 const PureFunction = props => {
 

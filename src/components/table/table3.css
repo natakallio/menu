@@ -1,0 +1,107 @@
+/* *, *:before, *:after {
+    box-sizing: inherit;
+    font-family: inherit;
+} */
+
+.subreddit-table-wrapper {
+    overflow: auto;
+    height: 300px;
+    width: 900px;
+    background: white;
+    color: black;
+    box-shadow: -13px 0px 15px 6px rgba(239, 239, 239, 0.76) inset;
+    margin: 0 auto;
+}
+
+.subreddit-table-wrapper table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.subreddit-table-wrapper thead th {
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    left: 72px;
+    background: white;
+    text-align: right;
+    /* width: 5em; */
+}
+
+.subreddit-table-wrapper td, .subreddit-table-wrapper th {
+    /*border: 1px solid #000;*/
+    border: none;
+    /* width: max-content; */
+    padding: 5px;
+    text-align: center;
+}
+
+.subreddit-table-wrapper tbody tr td:first-child,
+.subreddit-table-wrapper tbody tr td:nth-of-type(2) {
+    /* need to do the ellipsis overflow manually to keep the column box-shadow hack */
+    background: inherit;
+}
+
+.subreddit-table-wrapper tbody tr td:first-child {
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* .subreddit-table-wrapper tr td:first-child:after,
+.subreddit-table-wrapper tr th:first-child::after {
+    box-shadow: 15px 0 15px -15px rgba(0, 0, 0, 0.05) inset;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -15px;
+    width: 15px;
+} */
+/* .subreddit-table-wrapper tr td:nth-of-type(2):after,
+.subreddit-table-wrapper tr th:nth-of-type(2)::after {
+    box-shadow: 15px 0 15px -15px rgba(0, 0, 0, 0.05) inset;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -15px;
+    width: 15px;
+} */
+
+.subreddit-table-wrapper td:first-child,
+.subreddit-table-wrapper th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+
+.subreddit-table-wrapper td:nth-of-type(2) {
+    position: sticky;
+    left: 72px;
+    z-index: 1;
+}
+
+.subreddit-table-wrapper th:first-child,
+.subreddit-table-wrapper th:nth-of-type(2) {
+    z-index: 3;
+}
+
+.subreddit-table-wrapper tbody tr:nth-child(odd) {
+    background-color: #4C8BF5;
+    color: #fff;
+}
+.subreddit-table-wrapper tbody tr:nth-child(even) {
+    background-color: white;
+    color: black;
+}
+
+/* ----- */
+.subreddit-table-wrapper tbody tr .icon {
+    color: #4C8BF5;
+    cursor: pointer;
+}
+.subreddit-table-wrapper tbody tr:nth-child(odd)  .icon{
+    color: white;
+}

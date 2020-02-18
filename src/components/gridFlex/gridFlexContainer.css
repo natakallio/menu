@@ -1,0 +1,7 @@
+.gridFlexContainer {
+    overflow: auto;
+    height: 300px;
+    width: 900px;
+    margin: 10rem auto;
+    background-color: aliceblue;
+}

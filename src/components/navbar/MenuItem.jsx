@@ -5,11 +5,11 @@ import MenuIconFontAwesome from './MenuIconFontAwesome';
 
 const MenuItem = props => {
 
-    const {menuItem} = props;
+    const {menuItem, router, className} = props;
 
     return (
-        <div className="menuItem">
-            <MenuIconFontAwesome iconName={menuItem.iconName} />
+        <div className={ className ? className : "menuItem"} onClick={() => router.navigate("/cloud")}>
+            {menuItem.iconName && <MenuIconFontAwesome iconName={menuItem.iconName} />}
             <MenuTitle menuTitle={menuItem.title} />
         </div>
     );

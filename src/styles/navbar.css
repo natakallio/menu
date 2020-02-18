@@ -30,7 +30,7 @@ nav .menuItem:first-of-type {
     line-height: 3em;
     position: relative;
     border-right: 0.25em solid #ffffff;
-    background-color: #3498db;
+    background-color: var(--color-navbar-background);
     color: #ffffff;
 }
 

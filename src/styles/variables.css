@@ -8,8 +8,34 @@
   **/
   --color-primary: rgba(255, 0, 0, 0.9);
   --color-secondary: rgba(0, 255, 0, 0.3);
-  --color-navbar-background: rgb(127, 255, 212);
+  --color-navbar-background: rgb(51, 152, 219);
+  --color-navbar-icon-background: rgb(41, 128, 185);
+  --color-background-cell-odd: rgb(232, 250, 250);
+  --color-border-cell-odd: rgb(205, 224, 222);
+  --color-background-cell-even: rgb(235, 235, 237);
+  --color-border-cell-even: rgb(223, 223, 231);
+  --color-background-cell-header: rgb(202, 202, 248);
+  --color-border-cell-header: rgb(194, 194, 247);
   /**
+
+  /**
+  -- Table ---------------
+  **/
+  --color-table-header-notfixed: rgba(0, 0, 0);
+  --color-background-table-header-notfixed: rgb(192, 252, 115);
+  --color-table-header-fixed: rgba(0, 0, 0);
+  --color-background-table-header-fixed: rgb(250, 241, 120);
+  --color-secondary: rgba(0, 255, 0, 0.3);
+  --color-navbar-background: rgb(51, 152, 219);
+  --color-navbar-icon-background: rgb(41, 128, 185);
+  --color-background-cell-odd: rgb(232, 250, 250);
+  --color-border-cell-odd: rgb(205, 224, 222);
+  --color-background-cell-even: rgb(235, 235, 237);
+  --color-border-cell-even: rgb(223, 223, 231);
+  --color-background-cell-header: rgb(202, 202, 248);
+  --color-border-cell-header: rgb(194, 194, 247);
+  /**
+
   -- Fonts ---------------
   */
   /* --default-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */

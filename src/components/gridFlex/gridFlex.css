@@ -1,0 +1,18 @@
+.gridFlex {
+    width: 100%;
+    display: flex;
+}
+
+.gridFlexColumn {
+    background-color: lightskyblue;
+}
+
+.gridFlexCell {
+    /* background-color: palegreen; */
+}
+
+.firstColumn {
+    background-color: orange;
+    position: sticky;
+    left: 0;
+}
